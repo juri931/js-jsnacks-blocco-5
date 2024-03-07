@@ -60,3 +60,26 @@ let pesoTotale = zucchine.reduce((acc, curr) => acc + curr.peso, 0);
 
 snack1.innerHTML = "Il peso totale delle zucchine è di: " + pesoTotale + "gr";
 
+
+// JSnack 2: Dividi le zucchine per lunghezza
+
+const snack2 = document.querySelector(".snack2-output");
+
+
+const zucchineCorte = [];
+const zucchineLunghe = [];
+
+zucchine.forEach(zucchina => {
+  if (zucchina.lunghezza <= 15) {
+    zucchineCorte.push(zucchina);
+  } else {
+    zucchineLunghe.push(zucchina);
+  }
+});
+
+const totaleZucchineCorte = zucchineCorte.reduce((acc, curr) => acc + curr.peso, 0);
+const totaleZucchineLunghe = zucchineLunghe.reduce((acc, curr) => acc + curr.peso, 0);
+
+snack2.innerHTML = 
+  "Il peso totale delle zucchine corte è di: " + totaleZucchineCorte + "gr<br>" + 
+  "Il peso totale delle zucchine lunghe è di: " + totaleZucchineLunghe + "gr";
