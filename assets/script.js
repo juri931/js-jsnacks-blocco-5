@@ -100,7 +100,7 @@ snack3.innerHTML =
   '"' + stringa + '"' +"<br> diventa: " + '"' + inversa + '"';
 
 
-  //                          JSnack 4: Fusione di Array
+//                            JSnack 4: Fusione di Array
 const snack4 = document.querySelector(".snack4-output");
 
 function fondiArray(arr1, arr2) {
@@ -119,3 +119,28 @@ snack4.innerHTML =
   "Il primo array è: " + arr1 + "<br>" +
   "Il secondo array è: " + arr2 + "<br>" +
   "La fusione di entrambi gli array è: " + bigArray;
+
+
+//                       JSnack 5: Selezione di elementi in un array
+const snack5 = document.querySelector(".snack5-output");
+
+const array = ["mela", " carota", " zucchina", " zucchina", " zucchina", " pomodoro"];
+const a = 2;
+const b = 4;
+
+function estraiElementiInRange(range, a, b) {
+
+  const risultato = [];
+  
+  for (let i = a; i <= b; i++) {
+    risultato.push(range[i]);
+  }
+
+  return risultato;
+}
+
+const risultato = estraiElementiInRange(array, a, b);
+
+snack5.innerHTML = 
+  "Il nostro carrello contiene: " + array + "<br>" +
+  "Ma chi ha fatto la spesa?! correggiamo subito: " + risultato;
