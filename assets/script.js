@@ -98,3 +98,24 @@ const inversa = stringaInversa(stringa);
 snack3.innerHTML =
   "Questa è una funzione che inverte una stringa, es: <br>La frase: " +
   '"' + stringa + '"' +"<br> diventa: " + '"' + inversa + '"';
+
+
+  //                          JSnack 4: Fusione di Array
+const snack4 = document.querySelector(".snack4-output");
+
+function fondiArray(arr1, arr2) {
+  const bigArray = [];
+  for (let i = 0; i < arr1.length; i++) {
+    bigArray.push(arr1[i], arr2[i]);
+  }
+  return bigArray;
+}
+
+const arr1 = [" 1"," 2"," 3"];
+const arr2 = [" Zucchina", " Zucchine", " Zucchini"];
+const bigArray = fondiArray(arr1, arr2);
+
+snack4.innerHTML =
+  "Il primo array è: " + arr1 + "<br>" +
+  "Il secondo array è: " + arr2 + "<br>" +
+  "La fusione di entrambi gli array è: " + bigArray;
