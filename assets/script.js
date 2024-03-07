@@ -53,3 +53,10 @@ const zucchine = [
 ];
 
 // JSnack 1: Peso di tutte le zucchine
+
+const snack1 = document.querySelector('.snack1-output');
+
+let pesoTotale = zucchine.reduce((acc, curr) => acc + curr.peso, 0);
+
+snack1.innerHTML = "Il peso totale delle zucchine è di: " + pesoTotale + "gr";
+
