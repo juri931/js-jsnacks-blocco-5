@@ -52,7 +52,7 @@ const zucchine = [
   },
 ];
 
-// JSnack 1: Peso di tutte le zucchine
+//                        JSnack 1: Peso di tutte le zucchine
 
 const snack1 = document.querySelector('.snack1-output');
 
@@ -61,7 +61,7 @@ let pesoTotale = zucchine.reduce((acc, curr) => acc + curr.peso, 0);
 snack1.innerHTML = "Il peso totale delle zucchine è di: " + pesoTotale + "gr";
 
 
-// JSnack 2: Dividi le zucchine per lunghezza
+//                      JSnack 2: Dividi le zucchine per lunghezza
 
 const snack2 = document.querySelector(".snack2-output");
 
@@ -83,3 +83,18 @@ const totaleZucchineLunghe = zucchineLunghe.reduce((acc, curr) => acc + curr.pes
 snack2.innerHTML = 
   "Il peso totale delle zucchine corte è di: " + totaleZucchineCorte + "gr<br>" + 
   "Il peso totale delle zucchine lunghe è di: " + totaleZucchineLunghe + "gr";
+
+
+//                            JSnack 3: Stringa inversa 
+const snack3 = document.querySelector(".snack3-output");
+
+const stringa = "zucchine ovunque!";
+
+function stringaInversa(stringa) {
+  return stringa.split('').reverse().join('');
+}
+
+const inversa = stringaInversa(stringa); 
+snack3.innerHTML =
+  "Questa è una funzione che inverte una stringa, es: <br>La frase: " +
+  '"' + stringa + '"' +"<br> diventa: " + '"' + inversa + '"';
